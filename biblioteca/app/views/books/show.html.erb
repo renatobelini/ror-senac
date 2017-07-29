@@ -1,0 +1,11 @@
+<h1><%= @book.title %> </h1>
+
+<p>Autor: <%= @book.author.name %> </p>
+<p>Ano Publicação: <%= @book.publication_year %> </p>
+
+
+
+<%= link_to "Voltar",books_path, class: 'btn btn-primary' %>
+<%= link_to "Editar",edit_book_path(@book.id) , class: 'btn btn-primary'%>
+<%= link_to "Remover", book_path(@book.id), method: :delete, class: 'btn btn-danger',
+    data:{confirm: 'Deseja apagar este livro?'} %>
